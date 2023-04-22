@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags básicas</title>
+</head>
+<body>
+    <main> <!-- O HTML5 tem alguns elementos que identificam diferentes áreas de conteúdo. Essas elementos tornam seu HTML mais fácil de ler e ajudam com a otimização dos mecanismos de busca (SEO) e com a acessibilidade. -->
+
+        <h1>CatPhotoApp</h1> <!-- Título -->    <!-- Hierarquia: h1>h2>h3>h4>h5>h6 -->
+
+        <hr> <!-- Linha horizontal -->
+
+        <section>
+            <h2>Cat Photos</h2> <!-- Subtítulo -->
+            <p>See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery.</p> <!-- Páragrafo -->
+            <!-- Teste --> <!-- <--Aquilo e isto é um comentário(Não aparece no site) -->
+                <p><a href="https://freecatphotoapp.com" target="_blank">link to cat pictures</a></p>
+                <!-- Adiciona um link ao texto -->
+                <!-- O 'target' indica onde o link irá abrir, exemplo:'_blank= nova página' -->
+            <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back"></a> <!-- A imagem tmb é um link com a tag: 'a' -->
+            <!-- Adiciona uma imagem -->
+            <!-- SRC:O atributo src em um elemento img especifica o URL da imagem (onde a imagem está localizada). -->
+            <!-- alt: É como se fosse o 'nome', caso a foto não apareça no navegador da pessoa, irá aparecer oque está escrito no alt  -->
+        </section>
+        <section>
+            <h2>Cat Lists</h2>
+            <h3>Things cats love:</h3>
+            <ul> <!-- Lista não ordenada -->
+                <li>cat nip</li> <!-- Item da lista -->
+                <li>laser pointers</li>
+                <li>lasagna</li>
+            </ul>
+            <figure>
+                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+                <figcaption>Cats <em>love</em> lasagna.</figcaption> <!-- Adiciona uma legenda a imagem -->
+                <!-- O 'em' está sendo utilizado para dar ênfase para a palavra -->
+            </figure>
+            <h3>Top 3 things cats hate:</h3>
+            <ol> <!-- Lista ordenada -->
+                <li>flea treatment</li>
+                <li>thunder</li>
+                <li>other cats</li>
+            </ol>
+            <figure>
+                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+                <figcaption>
+                    Cats <strong>hate</strong> other cats. <!-- O elemento strong é usado para indicar que algum texto é de grande importância ou urgência. -->
+                </figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Cat Form</h2>
+            <form action="https://freecatphotoapp.com/submit-cat-photo"> <!-- Formulário -->
+                <label><input type="radio" id="indoor" name="indoor-outdoor" value="indoor">Indoor</label> <!-- Botão de marcar -->
+                <label><input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor">Outdoor</label>
+                <input type="text" name="catphotourl" placeholder="cat photo URL" required> <!-- O elemento input permite a você várias maneiras de coletar dados a partir de um formulário da web. -->
+
+                <!-- Existem muitos tipos de entradas (inputs) que você pode criar usando o atributo type. Você pode criar facilmente um campo de senha, um botão de redefinição ou um controle para permitir que os usuários selecionem um arquivo armazenado no computador. -->
+
+                <!-- O texto de placeholder é usado para dar às pessoas uma dica sobre o tipo de informação que deve ser inserido em uma entrada (input). Por exemplo, <input type="text" placeholder="Email address">. -->
+
+                <!-- Para evitar que um usuário envie o formulário quando as informações necessárias estiverem faltando, você precisa adicionar o atributo required a um elemento input. Não há a necessidade de definir um valor para o atributo required. Em vez disso, apenas adicione a palavra required (obrigatório) ao elemento input, certificando-se de que haja um espaço entre esse atributo e os outros. -->
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
