@@ -8,8 +8,80 @@
 </head>
 <body>
     <main>
-        <p><a href="../tags_basicas.html">Voltar para à página anterior</a></p>
-        <form action=""></form>
+        <div>
+            <p><a href="../tags_basicas.html">Voltar para à página anterior</a></p>
+        </div>
+        <div>
+            <form action="dados.html" method="get"> <!-- Method, define o metódo que será enviado as informações, get é pela URL e post é pelo servidor e Dialog não faço ideia  -->
+                <div>
+                    <label for="idtexto">Texto:</label> <!-- 'Prefixo do input' -->
+                    <input type="text" id="idtexto" name="idtexto"> <!-- Campo de texto que é enviado para o form -->
+                </div>
+                <div>
+                    <label for="idata">Data</label>
+                    <input type="date" name="iddata" id="iddata">
+                    <!-- Campo de data -->
+                </div>
+                <div>
+                    <label for="idarquivo">Adicione seu arquivo</label>
+                    <input type="file" name="idarquivo" id="idarquivo">
+                    <!-- O usuário pode enviar arquivos -->
+                </div>
+                <div>
+                    <label for="idsenha">Senha:</label>
+                    <input type="password" name="idsenha" id="idsenha">
+                    <!-- Campo de senha(troca os caracteres por asteriscos) -->
+                </div>
+                <div>
+                    <label for="idemail">email:</label>
+                    <input type="email" id="idemail" name="idemail">
+                    <!-- Campo de email -->
+                </div>
+                <div>
+                    <label for="idmultiplaescolha1">Escolha1</label>
+                    <input type="checkbox" name="idmultiplaescolha" id="idmultiplaescolha1" value="Escolha1">
+
+                    <label for="idmultiplaescolha2">Escolha2</label>
+                    <input type="checkbox" name="idmultiplaescolha" id="idmultiplaescolha2" value="Escolha2">
+
+                    <label for="idmultiplaescolha3">Escolha3</label>
+                    <input type="checkbox" name="idmultiplaescolha" id="idmultiplaescolha3" value="Escolha3">
+                    <!-- O usuário pode marcar as opçãos que ele quiser sobre o mesmo assunto -->
+                    <!-- Devemos adicionar o valor da opção também, pois se não o valor será on -->
+                </div>
+                <div>
+                    <label for="idescolha1">Opção1</label>
+                    <input type="radio" name="idescolha" id="idescolha1" value="Opção1">
+
+                    <label for="idescolha2">Opção2</label>
+                    <input type="radio" name="idescolha" id="idescolha2" value="Opção2">
+                    
+                    <label for="idescolha3">Opção3</label>
+                    <input type="radio" name="idescolha" id="idescolha3" value="Opção3">
+                    <!-- Quase a mesma coisa do 'checkbox', porém o usuário só pode escolhar uma opção para o determinado assunto -->
+                    <!-- Devemos adicionar o valor da opção também, pois se não o valor será on -->
+                </div>
+                <div>
+                    <label for="idareatexto"></label>
+                    <textarea name="idareatexto" id="idareatexto" cols="30" rows="5"></textarea>
+                    <!-- Área de texto -->
+                </div>
+                <div>
+                    <label for="idselecao">Seleção</label> <!-- Área de seleção -->
+                    <select name="selecao" id="idselecao">
+                        <option value="HTML">Html</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript">JS</option>
+                    </select>
+                    
+                </div>
+                <div>
+                    <input type="submit" name="idenviar" id="idenviar">
+                    <input type="button" name="idbotao" id="idbotao" value="Botão">
+                    <input type="reset" name="idlimpar" id="idlimpar" value="Limpar">
+                </div>
+            </form>
+        </div>
     </main>
 </body>
 </html>

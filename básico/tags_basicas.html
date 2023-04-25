@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tags básicas</title>
+    <title>CatPhotoApp</title>
 </head>
 <body>
     <main> <!-- O HTML5 tem alguns elementos que identificam diferentes áreas de conteúdo. Essas elementos tornam seu HTML mais fácil de ler e ajudam com a otimização dos mecanismos de busca (SEO) e com a acessibilidade. -->
@@ -54,22 +54,35 @@
         <section>
             <h2>Cat Form</h2>
             <form action="https://freecatphotoapp.com/submit-cat-photo"> <!-- Formulário -->
-                <label for="indoor">Indoor</label>
-                <input type="radio" id="indoor" name="indoor-outdoor" value="indoor"> <!-- Botão de marcar -->
-                <label>Outdoor</label>
-                <input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor">
+                <fieldset>
+                    <legend>Is your cat an indoor or outdoor cat?</legend> <!-- Legenda do fieldset(indica oque o usuário deve inserir) -->
+                    <label for="indoor">Indoor</label>
+                    <input type="radio" id="indoor" name="indoor-outdoor" value="indoor" checked> <!-- Botão de marcar -->
+                    <label for="outdoor">Outdoor</label>
+                    <input type="radio" id="outdoor" name="indoor-outdoor" value="outdoor">
+                </fieldset>
+                <fieldset>
+                    <legend>What's your cat's personality?</legend>
+                    <label for="loving">Loving</label>
+                    <input type="checkbox" id="loving" name="personality" value="loving" checked>
+
+                    <label for="lazy">Lazy</label>
+                    <input type="checkbox" name="personality" id="lazy" value="lazy">
+
+                    <label for="energetic">Energetic</label>
+                    <input type="checkbox" name="personality" id="energetic" value="energetic">
+                </fieldset>
                 <input type="text" name="catphotourl" placeholder="cat photo URL" required> <!-- O elemento input permite a você várias maneiras de coletar dados a partir de um formulário da web. -->
-
                 <!-- Existem muitos tipos de entradas (inputs) que você pode criar usando o atributo type. Você pode criar facilmente um campo de senha, um botão de redefinição ou um controle para permitir que os usuários selecionem um arquivo armazenado no computador. -->
-
                 <!-- O texto de placeholder é usado para dar às pessoas uma dica sobre o tipo de informação que deve ser inserido em uma entrada (input). Por exemplo, <input type="text" placeholder="Email address">. -->
-
                 <!-- Para evitar que um usuário envie o formulário quando as informações necessárias estiverem faltando, você precisa adicionar o atributo required a um elemento input. Não há a necessidade de definir um valor para o atributo required. Em vez disso, apenas adicione a palavra required (obrigatório) ao elemento input, certificando-se de que haja um espaço entre esse atributo e os outros. -->
                 <button type="submit">Submit</button>
+                <p><a href="html/formulario.html">Mais detalhes sobre formulários</a></p>
             </form>
         </section>
-        <p><a href="html/formulario.html">Mais detalhes sobre formulários</a></p>
-        
     </main>
+    <footer>
+        <p>No Copyright - <a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp.org</a></p>
+    </footer>
 </body>
 </html>
