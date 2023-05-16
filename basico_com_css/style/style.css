@@ -1,0 +1,29 @@
+@charset "UTF-8"; /* Regra */
+
+body { /* Vai aplicar estilo ao body(corpo) */
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg); /* Muda a cor de fundo para a imagem */
+}
+
+h1, h2, p {
+    text-align: center; /* Alinha o centro */
+  }
+
+.menu {
+    width: 80%;
+    margin: auto;
+    background-color: burlywood; /* Troca a cor de fundo */
+}
+
+.item p {
+    display: inline-block;
+}
+
+.flavor {
+    width: 75%;
+    text-align: left;
+}
+
+.price {
+    width: 25%;
+    text-align: right;
+}
