@@ -2,23 +2,68 @@
 
 body { /* Vai aplicar estilo ao body(corpo) */
     background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg); /* Muda a cor de fundo para a imagem */
+    font-family: sans-serif; /* Altera a fonte da letra */
+    padding: 20px;
 }
 
 h1, h2, p {
     text-align: center; /* Alinha o centro */
   }
 
-.menu {
-    width: 80%;
+h1, h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1 {
+    font-size: 40px; /* Tamanho da letra */
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+img {
+    display: block; 
     margin: auto;
+    margin-top: -25px;
+}
+
+.established {
+    font-style: italic; /* "estilo" da fonte, itálico etc. */
+}
+
+.address {
+    margin-bottom: 5px;
+}
+
+.menu /* o ponto signifa que é uma classe */{
+    width: 80%; /* porcentagem que ocupa a largura */
+    max-width: 500px; /* Maximo que a largura pode alcançar */
+    margin: auto; /* Margem */
     background-color: burlywood; /* Troca a cor de fundo */
+    padding: 20px;
+}
+
+hr {
+    height: 2px; /* Altura */
+    background-color: brown;
+    border-color: brown;
+}
+
+.bottom-line {
+    margin-top: 25px;
 }
 
 .item p {
     display: inline-block;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.flavor {
+.flavor, .dessert {
     width: 75%;
     text-align: left;
 }
@@ -26,4 +71,26 @@ h1, h2, p {
 .price {
     width: 25%;
     text-align: right;
+}
+
+/* FOOTER */
+
+footer {
+    font-size: 14px;
+}
+
+a {
+    color: black;
+}
+
+a:visited /* PseudoClasse */{
+    color: black;
+}
+
+a:hover {
+    color: brown;
+}
+
+a:active {
+    color: brown;
 }
