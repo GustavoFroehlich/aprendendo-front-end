@@ -22,22 +22,20 @@
             <label for="new-password">Create a New Password: <input type="password" name="password" required pattern="[a-z0-5]{8,}" id="new-password"></label> <!-- minlegth, obriga a pessoa colocar a quantidade de caracteres necessitado(valor do minlenngth) -->
             <!-- pattern, fará com que a senha seja correspondida com a expressão desejada. Exemplo: "[a-z0-5]{8,}" a senha só pode ter letras de a até z(minúsculas) e números de 0 a 5, com 8 caracteres ou mais -->
         </fieldset>
-        <hr>
         <fieldset>
-            <label for="personal"> <input type="radio" name="account-type" id="personal-account" value="personal-account"> Personal Account</label>
+            <label for="personal-account"> <input type="radio" name="account-type" id="personal-account" value="personal-account" class="inline"> Personal Account</label>
 
-            <label for="business">             <input type="radio" name="account-type" id="business-account" value="business-account"> Business Account</label>
+            <label for="business-account"> <input type="radio" name="account-type" id="business-account" value="business-account" class="inline"> Business Account</label>
 
-            <label for="terms"><input type="checkbox" required name="terms" id="terms-and-conditions" value="accept"> I accept the terms and conditions</label>
+            <label for="terms-and-conditions"><input type="checkbox" required name="terms" id="terms-and-conditions" value="accept" class="inline"> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/" target="_blank">terms and conditions</a></label>
         </fieldset>
-        <hr>
         <fieldset>
-            <label for="picture">Upload a profile picture:</label>
-            <input type="file" name="profile_picture" id="picture">
-            <label for="years">Input your age (years):</label>
-            <input type="number" name="years" id="years">
-            <label for="select">How did you hear about us?</label>
-            <select name="como_chegou_aqui" id="como_chegou_aqui">
+            <label for="profile-picture">Upload a profile picture:</label>
+            <input type="file" name="profile-picture" id="profile-picture">
+            <label for="age">Input your age (years):</label>
+            <input type="number" name="age" id="age" min="13" max="120"> <!-- "min" e "max" define o número minímo e máximo -->
+            <label for="referrer">How did you hear about us?</label>
+            <select name="referrer" id="referrer">
                 <option value="indefinido">(select one)</option>
                 <option value="freecodecamp_news">FreeCodeCamp News</option>
                 <option value="freecodecamp_youtube_channel">FreeCodeCamp YouTube Channel</option>
@@ -45,9 +43,10 @@
                 <option value="other">Other</option>
             </select>
             <label for="bio">Provide a bio: </label>
-            <textarea name="bio" id="bio" cols="20" rows="2"></textarea>
+            <textarea name="bio" id="bio" cols="30" rows="3" placeholder="I like coding on the beach..."></textarea>
+            <!-- placeholder serve para por um texto de exemplo ao usuário -->
         </fieldset>
-        <input type="submit" value="submit">
+        <input type="submit" value="submit" name="submit">
     </form>
 </body>
 </html>
