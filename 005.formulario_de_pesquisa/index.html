@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pesquisa</title>
+    <link rel="shortcut icon" href="images/flavicon-editado.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <h1 id="title">Formulário de Pesquisa sobre <strong>Carros</strong></h1>
+            <p id="description">Formulário elaborado sobre carros com o objetivo de coletar a opinião das usuários.</p>
+        </section>
+            <form action="html/página02.html" id="survey-form">
+                <label for="name" id="name-label">Nome:</label>
+                <input type="text" name="name" required placeholder="Digite seu nome" id="name">
+                <label for="email" id="email-label">E-mail: (opcional)</label>
+                <input type="email" name="email" placeholder="Digite seu email" id="email">
+                <label for="number" id="number-label">Idade: (opcional)</label>
+                <input type="number" name="idade" min="10" max="120" placeholder="Digite sua idade(10-120)" id="number">
+                <label for="dropdown">Qual seu gênero?</label>
+                <select name="genero" id="dropdown">
+                    <option value="">Selecione sua opção</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+                <p class="pergunta">você possui carteira de moterista?</p>
+                <label><input type="radio" name="carteira-de-motorista" value="sim" > Sim</label>
+                <label><input type="radio" name="carteira-de-motorista" value="nao"> Não</label>
+                <p class="pergunta">Quais são os principais fatores que influenciam sua decisão na hora de comprar um carro novo? (Marque todas as opções que se aplicam)</p>
+                <label><input type="checkbox" value="preco">Preço</label>
+                <label><input type="checkbox" value="conumo">Consumo de combustível</label>
+                <label><input type="checkbox" value="seguranca">segurança</label>
+                <label><input type="checkbox" value="conforto">Conforto</label>
+                <label><input type="checkbox" value="desempenho">Desempenho</label>
+                <label><input type="checkbox" value="design">Design</label>
+                <label><input type="checkbox" value="tecnologia">Tecnologia(por exemplo, recursoss de conectividade, assistência ao motorista, etc.)</label>
+                <label><input type="checkbox" value="sustentabilidade">Sustentabilidade (por exemplo, veículos elétricos, híbridos, etc.)</label>
+                <label><input type="checkbox" value="outro">Outro</label>
+
+                <label for="marca-favorita">Qual é a sua marca de carros favorita?</label>
+                <textarea name="marca-favorita" id="marca-favorita" cols="40" rows="1"></textarea>
+
+                <input type="submit" id="submit">
+            </form>
+    </main>
+    <footer>
+        <p>Site criado por Gustavo Froehlich</p>
+    </footer>
+</body>
+</html>
