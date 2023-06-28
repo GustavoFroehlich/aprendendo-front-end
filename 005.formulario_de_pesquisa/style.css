@@ -57,8 +57,7 @@ input {
 
 select {
     margin: 10px;
-    width: 97%;
-    min-width: 320px;
+    width: 95%;
     max-width: 708px;
 }
 
