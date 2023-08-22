@@ -1,7 +1,36 @@
 @charset "UTF-8";
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: sans-serif;
+}
+
+#navbar {
+    background-color: rgb(252, 248, 248);
+    border: 3px solid rgb(143, 143, 143);
+    border-top: none;
+    padding: 10px;
+    height: 100vh;
+    position: fixed;
+}
+
+#navbar header, #navbar li {
+    margin: 5px;
+}
+
+#navbar li, #navbar li a {
+    list-style: none;
+    color: black;
+    text-decoration: none;
+}
+
+#navbar li {
+    border-bottom: 1px solid black;
 }
 
 code {
@@ -16,4 +45,22 @@ code {
     padding: 15px;
     margin: 10px;
     border-radius: 5px;
+}
+
+header {
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media (min-width: 815px) {
+    body {
+        display: flex;
+        flex-direction: row;
+    }    
 }
