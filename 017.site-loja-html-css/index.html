@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgueria SaborBite</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMDO8zaMmyZorVQLwyPMpdu4b_z6uNXSMjfYxexQt-rXv0O1GsQD-wcqlvOn1srQ_qJPE&usqp=CAU" type="image/x-icon">
+</head>
+<body>
+    <header id="header">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnbcvnHHg0M6pP5ZS35RQOiPLbQqF1huOlig&usqp=CAU" alt="Logo Hamburguer Pixelizado" id="header-img">
+
+        <h1 id="name-loja">SaborBite</h1>
+
+        <nav id="nav-bar">
+            <ul>
+                <li class="nav-link"><a href="#about-us">About Us:</a></li>
+                <li class="nav-link"><a href="#feedback">Feedback</a></li>
+                <li class="nav-link"><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about-us"> <!-- Seção falando sobre a Lanchonete -->
+            <h2>About Us:</h2>
+            <h3>Where we came from:</h3>
+            <p>In 2008, in the pulsating heart of New York City, a unique gastronomic experience emerged that challenged conventions and expanded culinary horizons: SaborBite. Founded in the midst of the digital era's fervor, this innovative burger joint dove headfirst into the realm of bits and bytes, captivating the palates and minds of New Yorkers in an electrifying manner.</p>
+            <h3>What is our goal:</h3>
+            <p>With its bold design reminiscent of a vintage computing environment, ByteBurger transported its patrons on a journey through time, celebrating digital pop culture. The decor, filled with references to retro game icons and pixelated elements, created a one-of-a-kind atmosphere where each corner seemed like a pixel of nostalgia.</p>
+            <h3>Our amazing burgers</h3>
+            <p>But the true star, of course, was the burgers. The menu paid homage to cybernetic creativity, featuring names like "Binary Beef Burger," "Pixel Pepper Jack," and "RAM Ranch Burger." Each bite was a fusion of unexpected flavors, as if the ingredients were encoded to surprise taste buds. Customers could customize their orders through an interactive digital system at each table, further amplifying the interactive experience.</p>
+            <div id="video"> <!-- Não finalizado("Vai ser uma área fingindo ser um vídeo") -->
+
+            </div>
+        </section>
+        <section id="feedback">
+            <h2>Give your feedback:</h2> <!-- Área de Feedback -->
+            <form action="https://www.freecodecamp.com/email-submit">
+
+                <label for="email">Enter your email: <input type="email" placeholder="example@teste.com" required id="email" name="email"></label>
+
+                <label for="text">Send us your feedback: <textarea name="text" id="text" cols="25" rows="2" placeholder="sample text" required></textarea></label>
+
+                <input type="submit" id="submit">
+
+            </form>
+        </section>
+        <section id="menu">
+            <h2>Discover some of our products:</h2>
+            <div id="hamburguers">
+                <div class="hamburguer">
+                    <header><h3>Binary Beef Burger</h3></header>
+                    <p class="preco">$24,99</p>
+                    <img src="images/hamburguer.jpg" alt="hamburguer">
+                    <p class="descricao">The Binary Beef Burger: A digital-inspired delight with beef patties between binary buns. Cheese, lettuce, and condiments harmonize for a modern flavor fusion, embodying the essence of interconnected tastes.</p>
+                </div>
+                <div class="hamburguer">
+                    <header><h3>Pixel Pepper Jack</h3></header>
+                    <p class="preco">$29,99</p>
+                    <img src="images/hamburguer.jpg" alt="hamburguer">
+                    <p class="descricao">Pixel Pepper Jack: A spicy sensation layered with spicy flavors, paying homage to the pixelated past.</p>
+                </div>
+                <div class="hamburguer">
+                    <header><h3>RAM Ranch Burger</h3></header>
+                    <p class="preco">$35,00</p>
+                    <img src="images/hamburguer.jpg" alt="hamburguer">
+                    <p class="descricao">RAM Ranch Burger: A hearty stack of flavors, where succulent meat meets layers of memories through bold ingredients.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Site criado por: Gustavo Froehlich. Com o objetivo de praticar Front End. Nada disso é real!</p>
+    </footer>
+</body>
+</html>
