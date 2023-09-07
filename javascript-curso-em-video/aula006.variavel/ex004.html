@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu quarto program...</title>
+    <style>
+        body {
+            font: normal 30px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var nome = window.prompt("Qual é o seu nome?")
+        document.write(`Olá <strong>${nome}</strong>. Seu nome tem ${nome.length} letras. <br>`) //Document.write, escreve na tela! .length, cont quantas letras tem sua String.
+
+        document.write(`Seu nome todo maiúsculo é: ${nome.toUpperCase()}.<br>`) //.toUpperCase(), Transforma toda sua String em maiúscula.
+
+        document.write(`Seu nome todo minúsculo é: ${nome.toLowerCase()}.<br>`) //.toLowerCase(), Transforma tudo em minúsculo.
+
+        var sálario = Number.parseFloat(window.prompt("Quanto você ganha por mês?"))
+
+        document.write(`Seu sálario mensal é: R$${sálario.toFixed(2).replace('.', ',')}`) //.to/fixed(?) Diz quantas casas decimais o número vai ter fixo.
+        //.replace() troca algo por algo, nesse caso trocou "." por ","
+    </script>
+</body>
+</html>
