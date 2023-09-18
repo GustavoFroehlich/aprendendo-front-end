@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div><h1>Flexbox</h1></div>
+        <nav>
+            <ul>
+                <li><a href="#flex-direction">Flex-direction</a></li>
+                <li><a href="#flex-wrap">Flex-wrap</a></li>
+                <li><a href="#flex-flow">Flex-flow</a></li>
+                <li><a href="#justify-content">Justify-content</a></li>
+                <li><a href="#align-items">Align-items</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="flex-direction">
+            <h2>Flex-Direction</h2>
+            <p>Ordem de alinhamento dos seus elementos filho.</p>
+            <p>Existe 4 propriedades.</p>
+            
+            <h3>Row(Padrão):</h3>
+            <p>-A ordem de alinhamento fica no formato de <span class="importante">linha</span>. Um elemento ao lado do outro.</p>
+            <div class="quadrados row">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+
+            <h3>Column:</h3>
+            <p>-A ordem de alinhamento fica no formato de <span class="importante">coluna</span>. Um elemento em cima do outro</p>
+            <div class=" quadrados column">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+
+            <h3>Row-reverse:</h3>
+            <p>-A ordem de alinhamento fica no formato de <span class="importante">linha</span>, mas ela <span class="importante">inverte a ordem de trás pra frente</span> dos elementos. Um elemento ao lado do outro na ordem contrária e no outro lado da página.</p>
+            <div class="quadrados row-reverse">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+
+            <h3>Column-reverse:</h3>
+            <p>-A ordem de alinhamento fica no formato de <span class="importante">coluna</span>, mas ela <span class="importante">inverte a ordem de baixo pra cima</span> dos elementos. Um elemento ao em cima do outro na ordem contrária.</p>
+            <div class="quadrados column-reverse">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+        </section>
+
+        <section id="flex-wrap">
+            <h2>Flex-Wrap</h2>
+            <p>Diz para o elemento pai o que fazer quando o espaço não é suficiente para alinhar os elementos na nossa ordernação(Flex-direction).</p>
+            <p>Existe 3 propriedades.</p>
+
+            <h3>Nowrap:</h3>
+            <p>-Ele <span class="importante">não quebra a linha ou coluna</span>, apenas achata tudo lá dentro.  </p>
+            <h4>Row:</h4>
+            <p class="descricao">(O quadrado grande contém: 200px de altura e <span class="importante">150px</span> largura);</p>
+            <p class="descricao">(Cada quadradinho contém: <span class="importante">50px</span> de altura e largura, somando dá <span class="importante">200px</span> de altura);</p>
+            <p class="descricao final">O flexbox achatou os quadradinhos na parte da <span class="importante">largura</span>, para que continuassem cabendo dentro do quadrado grande!</p>
+            <div class="quadrados-p nowrap">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+            <h4>Column:</h4>
+            <p class="descricao">(O quadrado grande contém: <span class="importante">150px</span> de altura e 150px de largura);</p>
+            <p class="descricao">(Cada quadradinho contém: <span class="importante">50px</span> de altura e largura, somando dá <span class="importante">200px</span> de largura);</p>
+            <p class="descricao final">O flexbox achatou os quadradinhos na parte da <span class="importante">altura</span>, para que continuassem cabendo dentro do quadrado grande!</p>
+            <div class="quadrados-p nowrap-column">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+
+            <h3>Wrap:</h3>
+            <p>-Quando não couber mais na mesma linha ou coluna, eles <span class="importante">vão quebrar e criar uma linha ou coluna nova sem achatar nada</span>.</p>
+
+            <h4>Row:</h4>
+            <p class="descricao">(O quadrado grande contém: <span class="importante">200px</span> de altura e 150px de largura);</p>
+            <p class="descricao">(Cada quadradinho contém: <span class="importante">50px</span> de altura e largura, somando dá <span class="importante">200px</span> de largura);</p>
+            <p class="descricao final">O Flexbox criou uma nova linha para não achatar os quadradinhos!</p>
+            <div class="quadrados-p wrap">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+
+            <h4>Column:</h4>
+            <p class="descricao">(O quadrado grande contém: <span class="importante">150px</span> de altura e 150px de largura);</p>
+            <p class="descricao">(Cada quadradinho contém: <span class="importante">50px</span> de altura e largura, somando dá <span class="importante">200px</span> de largura);</p>
+            <p class="descricao final">O Flexbox criou uma nova coluna para não achatar os quadradinhos!</p>
+            <div class="quadrados-p wrap-column">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+
+            <h3>Wrap-reverse:</h3>
+            <p>-Quando não couber mais na mesma linha ou coluna, eles <span class="importante">vão quebrar e criar uma linha ou coluna nova sem achatar nada</span>, mas eles irão <span class="importante">inverter a ordem dos elementos</span>.</p>
+
+            <h4>Row:</h4>
+            <p class="descricao">(O quadrado grande contém: <span class="importante">200px</span> de altura e 150px de largura);</p>
+            <p class="descricao">(Cada quadradinho contém: <span class="importante">50px</span> de altura e largura, somando dá <span class="importante">200px</span> de largura);</p>
+            <p class="descricao final">O Flexbox criou uma nova linha para não achatar os quadradinhos! E inverteu a ordem dos elementos.</p>
+            <div class="quadrados-p wrap-reverse">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+
+            <h4>Column:</h4>
+            <p class="descricao">(O quadrado grande contém: <span class="importante">150px</span> de altura e 150px de largura);</p>
+            <p class="descricao">(Cada quadradinho contém: <span class="importante">50px</span> de altura e largura, somando dá <span class="importante">200px</span> de largura);</p>
+            <p class="descricao final">O Flexbox criou uma nova coluna para não achatar os quadradinhos! E inverteu a ordem dos elementos.</p>
+            <div class="quadrados-p wrap-reverse-column">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+        </section>
+
+        <section id="flex-flow">
+            <h2>Flex-Flow</h2>
+            <p>O flex-flow, refere-se à uma Shorthand para flex-direction e flex-wrap, fazendo com que você possa declarar as duas tags mais facilmente.</p>
+            <div class="centralize">
+                <code class="">flex-flow: (Flex-direction) (Flex-wrap);</code>
+                <code><span class="texto-code">Exemplo</span>: flex-flow: row wrap</code>
+            </div>
+        </section>
+
+        <section id="justify-content">
+            <h2>Justify-Content</h2>
+            <p>Alinha os elementos no eixo x(Horizontal) ou y(Vertical) dependendo do seu flex-direction(Sendo, row(x) e column(y)).</p>
+            <p>Possui 6 valores.</p>
+
+            <h3>Flex-start(Padrão):</h3>
+            <p>-Alinha os items no início.</p>
+            <h4>Row:</h4>
+            <div class="quadrados row just-flex-start">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+            <h4>Column:</h4>
+            <div class="quadrados column just-flex-start">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+
+            <h3>Flex-end</h3>
+            <p>-Alinha os items no fim.</p>
+            <h4>Row:</h4>
+            <div class="quadrados row just-flex-end">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+            <h4>Column:</h4>
+            <div class="quadrados column just-flex-end">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+
+            <h3>Center:</h3>
+            <p>-Alinha os items no centro.</p>
+            <h4>Row:</h4>
+            <div class="quadrados row just-center">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+            <h4>Column:</h4>
+            <div class="quadrados column just-center">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+
+            <h3>Space-between:</h3>
+            <p>-Distancia os items o máximo que possível um do outro, dando o mesmo espaço para todos os elementos.</p>
+            <h4>Row:</h4>
+            <div class="quadrados row just-between">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+            <h4>Column:</h4>
+            <div class="quadrados column just-between">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+
+            <h3>Space-around:</h3>
+            <p>-Distancia os items o máximo que possível um do outro, dando o mesmo espaço para todos os elementos, mas, também vai ter um pequeno espaçamento nas bordas, que normalmente, vai ser a metade do espaço entre os elementos.</p>
+            <h4>Row:</h4>
+            <div class="quadrados row just-around">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+            <h4>Column:</h4>
+            <div class="quadrados column just-around">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+
+            <h3>Space-evenly:</h3>
+            <p>-Distancia os items o máximo que possível um do outro, dando o mesmo espaço para todos os elementos, mas, também vai ter um espaçamento nas bordas com o mesmo tamnho dos espaços entre os elementos.</p>
+            <h4>Row:</h4>
+            <div class="quadrados row just-evenly">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+            <h4>Column:</h4>
+            <div class="quadrados column just-evenly">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+        </section>
+
+        <section id="align-items">
+            <h2>Align-Items</h2>
+            <p>Alinha os elementos no eixo x(Horizontal) ou y(Vertical) dependendo do seu flex-direction(Sendo, row(y) e column(x)).</p>
+            <p>Possui 3 valores.</p>
+
+            <h3>Flex-start(Padrão):</h3>
+            <p>-Alinha os items no início.</p>
+            <h4>Row:</h4>
+            <div class="quadrados row aligm-flex-start">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+            <h4>Column:</h4>
+            <div class="quadrados column aligm-flex-start">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+
+            <h3>Flex-end</h3>
+            <p>-Alinha os items no fim.</p>
+            <h4>Row:</h4>
+            <div class="quadrados row align-flex-end">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+            <h4>Column:</h4>
+            <div class="quadrados column align-flex-end">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+
+            <h3>Center:</h3>
+            <p>-Alinha os items no centro.</p>
+            <h4>Row:</h4>
+            <div class="quadrados row align-center">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+            <h4>Column:</h4>
+            <div class="quadrados column just-center">
+                <div class="blue">1</div>
+                <div class="red">2</div>
+                <div class="green">3</div>
+                <div class="yellow">4</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
